@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ ｜ Sトラベル</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="icon" href="../favicon.ico">
+    <!-- google fontsここから -->
+    <!-- noto sans & open sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&text=0123456789&display=swap" rel="stylesheet">
+    <!-- google fontsここまで -->
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/contact.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="bg">
+            <div class="inner">
+                <!-- ハンバーガーメニュー -->
+                <div class="openbtn">
+                    <div class="openbtn-area"><span></span><span></span><span></span></div>
+                </div>
+
+                <div class="ds_f jc_sb">
+                    <!-- logo -->
+                    <div class="header_logo"><a href="../index.html"><img src="../assets/images/S-travel.png"
+                                alt="Sトラベル"></a></div>
+
+                    <div class="header_content ds_f">
+                        <div class="header_word ds_f jc_sb">
+                            <p>幸せを見つける旅に出よう</p>
+                            <p class="s_travel">株式会社Sトラベル</p>
+                            <ul class="size_btn ds_f">
+                                <li>文字の大きさ</li>
+                                <li><a href="#">小</a></li>
+                                <li><a href="#">中</a></li>
+                                <li><a href="#">大</a></li>
+                            </ul>
+                        </div>
+                        <!-- nav -->
+                        <nav id="g-nav">
+                            <ul class="ta_c">
+                                <li><a href="../index.html">ホーム</a></li>
+                                <li><a href="../plan/index.html">旅行プラン予約</a>
+                                    <ul>
+                                        <li><a href="../plan/index.html#domestic">国内</a></li>
+                                        <li><a href="../plan/index.html#overseas">海外</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../feature/index.html">おすすめ旅行先特集</a>
+                                    <ul>
+                                        <li><a href="../feature/index.html#domestic">国内</a></li>
+                                        <li><a href="../feature/index.html#overseas">海外</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../news/index.html">ニュース<br>おトク情報</a>
+                                    <ul>
+                                        <li><a href="../news/index.html#news">ニュース</a></li>
+                                        <li><a href="../news/index.html#value">おトク情報</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../about/index.html">店舗へのアクセス<br>会社概要</a>
+                                    <ul>
+                                        <li><a href="../about/index.html#access">店舗へのアクセス</a></li>
+                                        <li><a href="../about/index.html#company">会社概要</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">お問い合わせ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ここまで共通 -->
+
+    <main>
+        <!-- innerここから -->
+        <div class="inner">
+
+            <!-- 問合せフォーム -->
+            <h1 class="ta_c">お問い合わせ</h1>
+
+            <!-- パンくずリスト -->
+            <ol class="breadcrumb ds_f">
+                <li><span>入力画面</span></li>
+                <li>確認画面</li>
+                <li>送信完了</li>
+            </ol>
+
+            <form action="#" method="POST">
+                <div class="contact">
+
+                    <!-- ラジオボタン -->
+                    <input type="radio" name="tab-radio" class="tab_radio" id="tab1_1" checked>
+                    <input type="radio" name="tab-radio" class="tab_radio" id="tab1_2">
+
+                    <!-- メニュー -->
+                    <label for="tab1_1" class="tab_menu1" id="tab_menu1_1">問合せ</label>
+                    <label for="tab1_2" class="tab_menu1" id="tab_menu1_2">予約</label>
+
+                    <!--問合せが選択された場合-->
+                    <div class="tab-content-item" id="tab_content1_1">
+                        <dl>
+                            <!--名前-->
+                            <dt>名前</dt>
+                            <dd><input type="text" name="name" placeholder="道端　カレンダー" required></dd>
+
+                            <!--フリガナ-->
+                            <dt>フリガナ</dt>
+                            <dd class="kana"><input type="text" name="kana" placeholder="ミチバタ　カレンダー"></dd>
+
+                            <!--電話番号-->
+                            <dt>電話番号・携帯番号</dt>
+                            <dd><input type="tel" name="tel" placeholder="090-0000-0000" required></dd>
+
+                            <!--メールアドレス-->
+                            <dt>メールアドレス</dt>
+                            <dd><input type="email" name="email" placeholder="i_am_calendar@sample.com" required></dd>
+
+                            <!--問合せ種別-->
+                            <dt>お問い合わせ種別</dt>
+                            <dd>
+                                <select name="message_type" required>
+                                    <option value="">選択してください</option>
+                                    <option value="旅行プランについて">旅行プランについて</option>
+                                    <option value="おトク情報ついて">おトク情報ついて</option>
+                                    <option value="当社について">当社について</option>
+                                    <option value="その他">その他</option>
+                                </select>
+                            </dd>
+
+                            <!--問合せ内容-->
+                            <dt>お問い合わせ内容</dt>
+                            <dd>
+                                <textarea name="message" required></textarea>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <!--予約が選択された場合-->
+                    <div class="tab-content-item" id="tab_content1_2">
+                        <dl>
+                            <!--名前-->
+                            <dt>名前</dt>
+                            <dd><input type="text" name="name" placeholder="道端　カレンダー" required></dd>
+
+                            <!--フリガナ-->
+                            <dt>フリガナ</dt>
+                            <dd class="kana"><input type="text" name="kana" placeholder="ミチバタ　カレンダー"></dd>
+
+                            <!--電話番号-->
+                            <dt>電話番号・携帯番号</dt>
+                            <dd><input type="tel" name="tel" placeholder="090-0000-0000" required></dd>
+
+                            <!--メールアドレス-->
+                            <dt>メールアドレス</dt>
+                            <dd><input type="email" name="email" placeholder="i_am_calendar@sample.com" required></dd>
+                        </dl>
+
+                        <div class="plan_section">
+                            <p>予約する旅行プラン</p>
+
+                            <!--ラジオボタン-->
+                            <input type="radio" name="tab_radio" class="tab_radio" id="tab2_1" checked>
+                            <input type="radio" name="tab_radio" class="tab_radio" id="tab2_2">
+
+                            <!--メニュー-->
+                            <label for="tab2_1" class="tab_menu2" id="tab_menu2_1">国内</label>
+                            <label for="tab2_2" class="tab_menu2" id="tab_menu2_2">海外</label>
+
+                            <!--国内が選択された場合-->
+                            <div class="plan_select" id="plan_select1">
+                                <select name="plan_select" required>
+                                    <option value="">選択してください</option>
+                                    <option value="雪舞う北海道縦断プラン">【北海道】雪舞う北海道縦断プラン</option>
+                                    <option value="冬のうまいもん食い倒れプラン">【大阪】冬のうまいもん食い倒れプラン</option>
+                                    <option value="真冬でもなんくるないさプラン">【沖縄】真冬でもなんくるないさプラン</option>
+                                </select>
+                            </div>
+
+                            <!--海外が選択された場合-->
+                            <div class="plan_select" id="plan_select2">
+                                <select name="plan_select" required>
+                                    <option value="">選択してください</option>
+                                    <option value="人気の韓国コスメ爆買いプラン">【韓国】人気の韓国コスメ爆買いプラン</option>
+                                    <option value="天国すぎて帰りたくなくなるプラン">【ニューカレドニア】天国すぎて帰りたくなくなるプラン</option>
+                                    <option value="花の都で芸術と美食に触れる6日間">【パリ】花の都で芸術と美食に触れる6日間</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <dl>
+                            <!--出発日-->
+                            <dt>出発日</dt>
+                            <dd><input type="date" name="date" required></dd>
+
+                            <!--人数-->
+                            <dt>人数</dt>
+                            <dd>
+                                <select name="number" class="number_select" required>
+                                    <option value="">大人</option>
+                                    <option value="大人1">大人1</option>
+                                    <option value="大人2">大人2</option>
+                                    <option value="大人3">大人3</option>
+                                    <option value="大人4">大人4</option>
+                                </select>
+
+                                <select name="number" class="number_select" required>
+                                    <option value="">子ども</option>
+                                    <option value="子ども0">子ども0</option>
+                                    <option value="子ども1">子ども1</option>
+                                    <option value="子ども2">子ども2</option>
+                                    <option value="子ども3">子ども3</option>
+                                    <option value="子ども4">子ども4</option>
+                                </select>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="btn-real ta_c"><input type="submit" value="送信"></div>
+                </div>
+            </form>
+
+            <!-- innerここまで -->
+        </div>
+    </main>
+
+    <!-- ここから共通 -->
+    <footer id="footer">
+        <div class="ds_f jc_sb inner">
+
+            <!-- footer_logo -->
+            <div class="footer_logo"><a href="../index.html"><img src="../assets/images/S-travel.png" alt="Sトラベル"></a>
+            </div>
+
+            <!-- 会社情報 -->
+            <address class="footer_address">
+                <span>株式会社Sトラベル</span>
+                <br>〒114-0022
+                <br>東京都北区王子本町0-0-0
+                <br>TEL：<a tabindex="-1">03-0000-0000</a>
+                <br>王子駅より徒歩3分
+                <br>定休日：水曜日
+                <br>営業時間：10:00～20:00
+            </address>
+
+
+            <!-- footer_nav -->
+            <ul class="footer_nav">
+                <li><a href="../index.html">ホーム</a></li>
+                <li><a href="../plan/index.html">旅行プラン予約</a></li>
+                <li><a href="../feature/index.html">おすすめ旅行先特集</a></li>
+                <li><a href="../news/index.html">ニュース</a></li>
+                <li><a href="../news/index.html#value">おトク情報</a></li>
+                <li><a href="../about/index.html">店舗へのアクセス</a></li>
+                <li><a href="../about/index.html#company">会社概要</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+
+            <!-- SNS_icon -->
+            <ul class="sns ds_f">
+                <li>
+                    <a href="https://twitter.com/" class="sns_btn ds_f">
+                        <div class="btn_icon twitter"></div>
+                        <div class="btn_text">Twitter</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/" class="sns_btn ds_f">
+                        <div class="btn_icon instagram"></div>
+                        <div class="btn_text">Instagram</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com/" class="sns_btn ds_f">
+                        <div class="btn_icon facebook"></div>
+                        <div class="btn_text">Facebook</div>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- SNS_icon_SP -->
+            <ul class="sns_sp ds_f">
+                <li><a href="https://twitter.com/">
+                        <div class="btn_icon twitter"></div>
+                    </a></li>
+
+                <li><a href="https://www.instagram.com/">
+                        <div class="btn_icon instagram"></div>
+                    </a></li>
+
+                <li><a href="https://www.facebook.com/">
+                        <div class="btn_icon facebook"></div>
+                    </a></li>
+            </ul>
+
+            <!-- TOPへ戻る -->
+            <div id="page-top">
+                <a href="#">
+                    <ul class="ds_f jc_sb">
+                        <li>TOPへ</li>
+                        <li>戻る</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+        <p class="copy ta_c">&copy;2022 S-travel Co., Ltd.</p>
+    </footer>
+</body>
+
+</html>
