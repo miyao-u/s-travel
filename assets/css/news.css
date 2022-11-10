@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+/* nav現在地 */
+nav>ul>li:nth-of-type(4){
+    background-color: rgba(112, 128, 144, 0.1);
+}
+
+/* モーダルウィンドウここから */
+.modal{
+    width: 40%;
+    height: auto;
+}
+.modal_bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+}
+.modal_photo{
+    position: fixed;
+    top: -12%;
+    left: -3%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 56vw;
+    height: 33vw;
+    z-index: 10;
+}
+/* モーダルウィンドウここまで */
+
+/* newsのbox */
+.news{
+    padding: 10px 20px 10px 30px;
+    margin: 30px 0;
+    color: #000;
+    background: rgba(176,196,222,0.3);
+    border-top: solid 5px #4682b4;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.news img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.news .img_sp{
+    display: none;
+}
+
+.news .news_article{
+    width: 45%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.news .news_article dl{
+    font-size: 1.25em;
+}
+
+.news h3{
+    text-align: center;
+}
+
+
+/* news_btnここから */
+.news_btn a {
+    background: #eee;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    margin-left: auto;
+    max-width: 250px;
+    padding: 10px 20px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    z-index:0;
+    border-left: solid 5px #4682b4;
+    box-shadow: 2px 4px 5px 2px #aaa;
+}
+.news_btn a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: #4682b4;
+    transition: .3s;
+    left:0;
+}
+.news_btn a:hover {
+    color: #FFF;
+}
+.news_btn a:hover:before {
+    width: 100%;
+    z-index: -1;
+}
+/* news_btnここまで */
+
+/* カレンダーiconここから */
+time.icon{
+  font-size: 1em; /* change icon size */
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 0.6em;
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+time.icon *{
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+time.icon em{
+  position: absolute;
+  top: 0;
+  color: #fff;
+  background-color: #4682b4;
+  border-bottom: 1px dashed #b0c4de;
+  box-shadow: 0 2px 0 #4682b4;
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+time.icon span{
+  font-size: 36px;
+  padding-top: 0.8em;
+}
+/* カレンダーiconここまで */
+
+#value{
+    margin-top: 100px;
+}
+
+/* valueのboxここから */
+.value{
+    padding: 20px;
+    margin: 0;
+    color: #000;
+    background: rgba(176,196,222,0.3);
+    border-top: solid 5px #4682b4;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    width: 43%;
+}
+
+.value img{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.value .news_article{
+    width: 45%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.value .news_article dl{
+    font-size: 1.25em;
+}
+
+.value h2{
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.value p{
+    margin: 20px 10px;
+}
+/* valueのboxここまで */
+
+/* value_btnここから */
+.value_btn{
+    text-align: right;
+}
+
+.value_btn a{
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 10px 40px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s;
+
+    border: 2px solid #4682b4;
+    border-radius: 0;
+    background: #fff;
+    transform-style: preserve-3d;
+    margin: 10px 0;
+}
+
+.value_btn a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    content: '';
+    transition: all .3s;
+    transform: translateX(0) translateY(0);
+    border-radius: 0 50% 50% 0;
+    background: #4682b4;
+}
+
+.value_btn a:hover:before {
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    content: " ";
+    background-image: url(../images/finger.png);
+    background-repeat: no-repeat;
+    background-size: 22px auto;
+    background-position: center;
+    transform: translateX(540%) translateY(.5rem);
+    border-radius: 50%;
+}
+/* value_btnここまで */
+
+/* レスポンシブここから */
+@media screen and (max-width:640px) {
+
+    nav>ul>li:nth-of-type(4){
+        background-color: rgba(112, 128, 144, 0);
+    }
+
+    /* news */
+    .news{
+        padding: 0 15px 20px 15px;
+        margin: 30px auto 0;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    time.icon {
+        margin-top: 25px;
+        margin-left: 10px;
+    }
+
+    .news .img_pc{
+        display: none;
+    }
+    .news .img_sp{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px
+    }
+
+    .news .news_article {
+        width: 100%;
+    }
+    .news .news_article dl {
+        margin: 40px 0 20px;
+    }
+
+    .news_btn{
+        margin-top: 15px;
+    }
+
+    /* value */
+    #value{
+        margin-top: 50px;
+    }
+    .value{
+    width: 90vw;
+    margin: 30px auto 0;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    }
+
+    #openbtn{
+        position: fixed;
+    }
+
+    /**/
+    .modal{
+        width: 50%;
+    }
+    .modal_photo{
+        width: 100vw;
+        height: 30vh;
+    }
+/* レスポンシブここまで */
+}

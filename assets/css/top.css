@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*
+nav>ul>li:nth-of-type(1){
+    background-color: rgba(112, 128, 144, 0.1);
+}
+*/
+
+/* main */
+main .inner{
+    padding-top: 360px;
+}
+
+@media screen and (max-width:640px){
+    main .inner{
+    padding-top: 140px;
+    }
+
+
+    
+}

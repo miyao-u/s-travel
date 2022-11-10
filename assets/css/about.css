@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+/* nav現在地 */
+nav>ul>li:nth-of-type(5){
+    background-color: rgba(112, 128, 144, 0.1);
+}
+
+
+.access{
+    position: relative;
+    margin: 30px auto 100px;
+    padding: 20px 30px;
+    /*width: 90%;  ボックス幅 */
+    background-color: rgba(176,196,222,0.3); /* ボックス背景色 */
+
+    border: 2px solid #000; /* 枠線 */
+    box-shadow: 1px 1px 1px #acacac; /* 影の色 */
+}
+.company{
+    position: relative;
+    margin: 30px auto;
+    padding: 20px 30px;
+    /*width: 90%;  ボックス幅 */
+    background-color: rgba(176,196,222,0.3); /* ボックス背景色 */
+    border: 2px solid #000; /* 枠線 */
+    box-shadow: 1px 1px 1px #acacac; /* 影の色 */
+}
+
+.access::before,
+.company::before{
+    position: absolute;
+    content: '';
+    top: -15px;
+    right: 10px;
+    height: 55px;
+    width: 15px;
+    border: 3px solid #555555; /*クリップ色 */
+    background-color: none;
+    border-radius: 12px;
+    box-shadow: 1px 1px 2px #999;
+    transform: rotate(10deg);
+    z-index: 1;
+}
+
+.access::after,
+.company::after{
+    position: absolute;
+    content: '';
+    top: 0px;
+    width: 10px; 
+    right: 20px;
+    border: solid 5px rgba(176,196,222,0); /*背景色と同じ色にする*/
+    z-index: 2;
+}
+/**/
+
+/**/
+.access img{
+    height: 300px;
+    object-fit: contain;
+}
+.access iframe{
+    width: 100%;
+    height: 400px;
+}
+.company img{
+    height: 300px;
+    object-fit: contain;
+    margin: auto 0;
+}
+.access address{
+    width: 50%;
+    font-size: 1.25em;
+    line-height: 2em;
+}
+.company .company_section{
+    width: 65%;
+    font-size: 1.25em;
+}
+.company .company_section dl{
+    margin: 10px 0 10px 2em;
+}
+.company .company_section dt{
+    float: left;
+    width: 120px;
+}
+.company .company_section dd{
+    margin-left: 120px;
+}
+.company .company_section .break{
+    margin-top: 1.5em;
+    line-height: 1.5em;
+}
+.company .company_section .name{
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+.company .company_section .name li:first-of-type{
+    margin: auto 30px auto 0;
+}
+.company .company_section .name img{
+    height: 100px;
+}
+
+
+/* レスポンシブここから */
+@media screen and (max-width:640px) {
+
+    nav>ul>li:nth-of-type(5){
+        background-color: rgba(112, 128, 144, 0);
+    }
+
+    /* acceess */
+    .access{
+        width: 90vw;
+        margin: 30px auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .access img{
+        height: auto;
+    }
+    .access address{
+        width: 100%;
+        font-size: 1.1em;
+        margin: 20px 0;
+        line-height: 1.7em;
+    }
+    .access address span{
+        font-size: 0.9em;
+    }
+    .access iframe{
+        height: 300px;
+    }
+
+    /* company */
+    .company{
+        width: 90vw;
+        margin: 30px auto;
+        padding: 20px 15px 15px 20px;
+        box-sizing: border-box;
+    }
+    .company img{
+        height: 150px;
+        margin: 0 auto 20px;
+        display: block;
+    }
+    .company .company_section {
+        width: 100%;
+        font-size: 1.1em;
+    }
+    .company .company_section dl {
+        margin: 10px 0 10px 0;
+    }
+    .company .company_section dt {
+        width: 110px;
+    }
+    .company .company_section .name img {
+        height: 70px;
+        margin: 0 0 0 auto;
+    }
+/* レスポンシブここまで */
+}

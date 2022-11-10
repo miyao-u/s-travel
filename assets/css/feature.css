@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+/* nav現在地 */
+nav>ul>li:nth-of-type(3){
+    background-color: rgba(112, 128, 144, 0.1);
+}
+
+/* 見出し */
+h2{
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    padding: 10px 15px 14px 50px;
+    color: #fff;
+    border-radius: 100vh 0 0 100vh;
+    background: #4682b4;
+    text-align: center;
+    font-size: 1.75em;
+    letter-spacing: 0.25em;
+}
+
+h2:before {
+    position: absolute;
+    top: calc(50% - 7px);
+    left: 10px;
+    width: 14px;
+    height: 14px;
+    content: '';
+    border-radius: 50%;
+    background: #fff;
+}
+
+/* 旅行プランのbox */
+.plan {
+    position: relative;
+    margin: 55px 0;
+    padding: 10px;
+    border: solid 3px #4682b4;
+    border-radius: 0 6px 6px;
+    background-color: rgba(176,196,222,0.3);
+}
+.plan .city {
+    position: absolute;
+    display: inline-block;
+    top: -36px;
+    left: -3px;
+    padding: 3px 15px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.25em;
+    background: #4682b4;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px 6px 0 0;
+}
+
+.plan p {
+    margin: 0; 
+    padding: 0;
+}
+
+.plan img{
+    width: 45%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.plan .feature_article{
+    width: 51%;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.plan h3{
+    text-align: center;
+}
+
+/* feature_btnここから */
+.feature_btn a {
+    background: #b0c4de;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    max-width: 200px;
+    box-sizing: border-box;
+}
+.feature_btn a::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 2px solid #4682b4;
+  transition: 0.2s;
+}
+
+.feature_btn a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+  transform: rotate(45deg);
+}
+
+.feature_btn a:hover::before {
+    top: 0;
+    left: 0;
+}
+
+.feature_btn a:hover {
+    background-color: #4682b4;
+}
+
+.feature_btn a:active{
+    color: #fff;
+    background-color: #708090;
+    transition: 0ms;
+}
+
+.feature_btn a:active::before{
+    border-color: #708090;
+}
+
+.feature_btn a:active::after{
+    border-color: #fff;
+}
+/* feature_btnここまで */
+
+
+/* レスポンシブここから */
+@media screen and (max-width:640px) {
+
+    nav>ul>li:nth-of-type(3){
+        background-color: rgba(112, 128, 144, 0);
+    }
+
+    h2{
+        margin-left: 25px;
+    }
+
+    .plan {
+        margin: 55px auto;
+        width: 90vw;
+        height: auto;
+        padding: 15px 10px 15px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+    .plan img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+    }
+    .plan .feature_article {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    .plan p{
+        margin-bottom: 3vh;
+    }
+    .feature_btn{
+        margin-top: 10px;
+    }
+
+    /* カレンダー */
+    .wrapper{
+        width: 90vw;
+    }
+
+
+/* レスポンシブここまで */
+}

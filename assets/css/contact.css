@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+/* nav現在地 */
+nav>ul>li:nth-of-type(6){
+  background-color: rgba(112, 128, 144, 0.1);
+}
+
+/* 枠線 */
+.contact {
+  border: 2px solid #000;
+}
+
+/* パンくずリストここから */
+.breadcrumb {
+  flex-wrap: wrap;
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
+.breadcrumb li:not(:last-of-type)::after {
+  content: "»";
+  margin: 0 .6em; /* 記号の左右の余白 */
+  color: #777; /* 記号の色 */
+}
+.breadcrumb li span{
+  color: blue;
+}
+/* パンくずリストここまで */
+
+/**/
+.contact {
+  background-color: rgba(176,196,222,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  height: 630px;
+}
+
+#tabMenu1_1,
+#tabMenu1_2{
+  font-size: 22px;
+}
+
+/* ラジオボタンは非表示 */
+.tab_radio,
+.plan_select{
+  display: none;
+}
+
+/* タブのデザイン */
+.tab_menu1{
+  display: block;
+  float: left;
+  width: calc(100%/2);
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 3px solid #b0c4de;
+  font-size: 1.375em;
+}
+.tab_menu1:hover {
+  opacity: 0.8;
+}
+.tab_menu2{
+  display: inline-block;
+  border: 2px solid #000;
+  border-radius: 4px;
+  padding: 1px 10px;
+  margin: 0 10px 5px 0;
+  background-color: #fff;
+}
+
+/* コンテンツを非表示にしておく */
+.tab-content-item {
+  display: none;
+  padding: 30px 15% 0;
+  overflow: hidden;
+  min-height: 460px;
+}
+
+/* ラジオボタンがチェックされたら、コンテンツを表示 */
+#tab1_1:checked~#tab_content1_1,
+#tab1_2:checked~#tab_content1_2,
+#tab2_1:checked~#plan_select1,
+#tab2_2:checked~#plan_select2{
+  display: block;
+}
+
+/* ラジオボタンがチェックされたら、タブの色を変える */
+#tab1_1:checked~#tab_menu1_1,
+#tab1_2:checked~#tab_menu1_2{
+  background-color: #b0c4de;
+}
+#tab2_1:checked~#tab_menu2_1,
+#tab2_2:checked~#tab_menu2_2{
+  background-color: #b0c4de;
+}
+
+/* 配置調整 */
+form dt,
+form p{
+  float: left;
+  clear: left;
+  width: 250px;
+  font-size: 1.25em;
+}
+form dd,
+.plan_select{
+  margin-left: 250px;
+}
+
+form dt,
+form p,
+form dd{
+  height: 60px;
+}
+form .plan_section{
+  height: 100px;
+}
+
+form dd span{
+  padding-left: 10px;
+  color: #708090;
+  display: inline-block;
+  line-height: 30px;
+}
+
+input,
+select,
+textarea{
+  padding: 3px 5px;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  width: 400px;
+  font-family: 'Open Sans','Noto Sans JP', sans-serif;
+}
+
+input{
+  box-sizing: border-box;
+  height: 30px;
+  margin-right: 10px;
+}
+select{
+  height: 30px;
+  margin-right: 6px;
+}
+textarea{
+  box-sizing: border-box;
+  resize: none;
+  width: 400px;
+  height: 100px;
+  margin-right: 6px;
+}
+
+.number_select{
+  width: 190px;
+}
+.number_select:first-of-type{
+  margin-right: 16px;
+}
+
+/*カーソル合わせたとき*/
+input:focus,
+select:focus,
+textarea:focus{
+	border: 2px solid #da3c41;
+	outline: none;
+}
+
+/*placeholder*/
+::placeholder{
+  color: #bbb;
+  font-family: 'Open Sans','Noto Sans JP', sans-serif;
+}
+
+/*必須*/
+form dd::after,
+.plan_select::after{
+  content: "必須";
+}
+
+form .kana::after{
+  content: "";
+}
+
+/*送信ボタン*/
+
+.btn-real {
+  text-decoration: none;
+  color: rgba(152, 152, 152, 0.43);/*アイコン色*/
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: inset 0 0px 0 rgb(255 255 255 / 50%), 0 4px 10px 3px rgb(0 0 0 / 19%);
+  border-bottom: solid 2px #b5b5b5;
+  margin: 0 auto;
+  position: relative;
+}
+.btn-real input {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  font-size: 1.25em;
+  color: #000;
+}
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+
+.btn-real:active {
+  /*押したとき*/
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: none;
+}
+
+
+/* レスポンシブここから */
+@media screen and (max-width:640px) {
+
+  nav>ul>li:nth-of-type(6){
+    background-color: rgba(112, 128, 144, 0);
+  }
+
+  .contact{
+    height: auto;
+  }
+  .breadcrumb {
+    flex-wrap: wrap;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .tab-content-item {
+    padding: 30px 4vw 0 7vw;
+    min-height: 660px;
+  }
+
+  form dt{
+    float: none;
+    clear: none;
+    height: 35px;
+  }
+  form dd{
+    margin-left: 0;
+  }
+  form p{
+    height: 35px;
+    width: 280px;
+  }
+
+  input, select, textarea {
+    width: 82%;
+    padding: 3px 5px;
+  }
+  form .plan_section {
+    height: auto;
+  }
+  .plan_select{
+    margin-left: 0;
+    height: 60px;
+  }
+  .number_select {
+    width: 38%;
+  }
+  select{
+    margin-right: 5px;
+  }
+
+
+/* レスポンシブここまで */
+}
